@@ -1,0 +1,17 @@
+---
+const { title, description, svg, titleClass, descriptionClass } = Astro.props;
+---
+
+<section class="relative flex items-center justify-center mx-auto h-screen">
+  <div class="grid grid-cols-2 grid-rows-1 gap-4 w-[1440px] h-[569px] relative">
+    <div class="w-[445px] h-[312px] relative">
+      <Fragment set:html={svg} />
+    </div>
+    <div
+      class="w-[445px] h-[228px] flex flex-col items-center justify-center mx-auto"
+    >
+      <h1 class={titleClass}>{title}</h1>
+      <p class={descriptionClass}>{description}</p>
+    </div>
+  </div>
+</section>

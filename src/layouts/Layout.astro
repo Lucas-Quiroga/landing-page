@@ -1,0 +1,77 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import SectionInfo from "../components/Section-Info.astro";
+import SectionReu from "../components/SectionReu.astro";
+import happyNews from "../../public/undraw_happy_news_re_tsbd.svg?raw";
+import socialInfluencer from "../../public/undraw_social_girl_re_kdrx.svg?raw";
+import mentions from "../../public/undraw_mention_re_k5xc.svg?raw";
+import Hero from "../components/Hero.astro";
+import Pricing from "../components/Pricing.astro";
+import Footer from "../components/Footer.astro";
+
+const { title } = Astro.props;
+
+const infoSection = [
+  {
+    title: "Light, Fast & Powerful",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+    svg: happyNews,
+    titleClass:
+      "w-[445px] text-slate-900 text-4xl font-medium font-['Roboto'] leading-[48px]",
+    descriptionClass:
+      "w-[445px] text-slate-500 text-base font-normal font-['Roboto'] leading-relaxed",
+  },
+  {
+    title: "Light, Fast & Powerful",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+    svg: socialInfluencer,
+    titleClass:
+      "w-[445px] text-slate-900 text-4xl font-medium font-['Roboto'] leading-[48px]",
+    descriptionClass:
+      "w-[445px] text-slate-500 text-base font-normal font-['Roboto'] leading-relaxed",
+  },
+  {
+    title: "Light, Fast & Powerful",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+    svg: mentions,
+    titleClass:
+      "w-[445px] text-slate-900 text-4xl font-medium font-['Roboto'] leading-[48px]",
+    descriptionClass:
+      "w-[445px] text-slate-500 text-base font-normal font-['Roboto'] leading-relaxed",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <Hero />
+    <SectionInfo />
+    {
+      infoSection.map((section) => (
+        <SectionReu
+          title={section.title}
+          description={section.description}
+          svg={section.svg}
+          titleClass={section.titleClass}
+          descriptionClass={section.descriptionClass}
+        />
+      ))
+    }
+    <Pricing />
+    <Footer />
+  </body>
+</html>

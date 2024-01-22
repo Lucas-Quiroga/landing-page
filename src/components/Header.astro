@@ -1,0 +1,51 @@
+---
+import NavItem from "./NavItem.astro";
+
+const navItems = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "About",
+    url: "/about",
+  },
+  {
+    name: "Contact",
+    url: "/contact",
+  },
+];
+
+const positions = [
+  { left: "0", top: "0" },
+  { left: "98px", top: "0" },
+  { left: "196px", top: "0" },
+];
+---
+
+<header>
+  <nav class="w-[1440px] h-[60px] relative">
+    <div class="w-[1440px] h-[60px] left-0 top-0 absolute"></div>
+
+    <ul class="flex gap-10 w-[245px] h-6 left-[165px] top-[18px] absolute">
+      {
+        navItems.map((item, index) => (
+          <NavItem
+            name={item.name}
+            url={item.url}
+            classe={`left-${positions[index].left} top-${positions[index].top} relative  text-slate-500 text-sm font-normal font-['Roboto'] leading-normal`}
+          />
+        ))
+      }
+    </ul>
+    <div class="w-40 h-[26px] left-[1115px] top-[18px] absolute">
+      <div class="w-40 h-[26px] left-0 top-0 absolute bg-indigo-950 rounded-sm">
+      </div>
+      <div
+        class="w-40 left-0 top-[4px] absolute text-center text-white text-xs font-medium font-['Roboto'] leading-[18px]"
+      >
+        Buy Now
+      </div>
+    </div>
+  </nav>
+</header>
