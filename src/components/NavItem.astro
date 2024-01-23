@@ -1,7 +1,7 @@
 ---
-const { name, url, classe } = Astro.props;
+const { title, path } = Astro.props;
 ---
 
-<li class={classe}>
-  <a href={url}>{name}</a>
+<li>
+  <a href={path}>{title}</a>
 </li>
