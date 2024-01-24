@@ -1,17 +1,25 @@
 ---
-const { title, description, svg, titleClass, descriptionClass } = Astro.props;
+const { title, description, svg } = Astro.props;
 ---
 
-<section class="relative flex items-center justify-center mx-auto h-screen">
-  <div class="grid grid-cols-2 grid-rows-1 gap-4 w-[1440px] h-[569px] relative">
-    <div class="w-[445px] h-[312px] relative">
+<section
+  class="relative flex flex-col items-center justify-center mx-auto px-4 py-5 lg:h-screen mt-9"
+>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full h-auto relative">
+    <div class="hidden max-w-full h-auto relative overflow-x-hidden mt-14">
       <Fragment set:html={svg} />
     </div>
     <div
-      class="w-[445px] h-[228px] flex flex-col items-center justify-center mx-auto"
+      class="w-full md:w-[600px] h-auto md:h-[228px] flex flex-col items-center justify-center mx-auto"
     >
-      <h1 class={titleClass}>{title}</h1>
-      <p class={descriptionClass}>{description}</p>
+      <h1
+        class="text-slate-900 text-3xl md:text-4xl font-medium font-['Roboto'] leading-[48px]"
+      >
+        {title}
+      </h1>
+      <p class="mt-5 text-slate-500 text-base font-normal leading-relaxed">
+        {description}
+      </p>
     </div>
   </div>
 </section>

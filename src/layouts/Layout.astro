@@ -18,30 +18,18 @@ const infoSection = [
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
     svg: happyNews,
-    titleClass:
-      "w-[445px] text-slate-900 text-4xl font-medium font-['Roboto'] leading-[48px]",
-    descriptionClass:
-      "w-[445px] text-slate-500 text-base font-normal font-['Roboto'] leading-relaxed",
   },
   {
     title: "Light, Fast & Powerful",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
     svg: socialInfluencer,
-    titleClass:
-      "w-[445px] text-slate-900 text-4xl font-medium font-['Roboto'] leading-[48px]",
-    descriptionClass:
-      "w-[445px] text-slate-500 text-base font-normal font-['Roboto'] leading-relaxed",
   },
   {
     title: "Light, Fast & Powerful",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
     svg: mentions,
-    titleClass:
-      "w-[445px] text-slate-900 text-4xl font-medium font-['Roboto'] leading-[48px]",
-    descriptionClass:
-      "w-[445px] text-slate-500 text-base font-normal font-['Roboto'] leading-relaxed",
   },
 ];
 ---
@@ -66,12 +54,10 @@ const infoSection = [
           title={section.title}
           description={section.description}
           svg={section.svg}
-          titleClass={section.titleClass}
-          descriptionClass={section.descriptionClass}
         />
       ))
     }
-    <Pricing />
+    <!-- <Pricing /> -->
     <Footer />
   </body>
 </html>
