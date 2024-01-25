@@ -1,25 +1,37 @@
 ---
-const { title, description, svg } = Astro.props;
+const { title, description, svg, index } = Astro.props;
 ---
 
 <section
-  class="relative flex flex-col items-center justify-center mx-auto px-4 py-5 lg:h-screen mt-9"
+  class="relative flex flex-col items-center justify-center mx-auto px-4 py-5 mt-9 lg:py-0 lg:mt-2"
 >
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full h-auto relative">
-    <div class="hidden max-w-full h-auto relative overflow-x-hidden mt-14">
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 gap-4 relative lg:h-[25rem] xl:gap-[12rem] 2xl:gap-[20rem]"
+  >
+    <div
+      class={`hidden overflow-x-hidden mt-14 overflow-hidden lg:block lg:w-[20rem] lg:mx-auto xl:w-[30rem] ${
+        index === 1 ? "lg:mt-[7rem]" : ""
+      }`}
+    >
       <Fragment set:html={svg} />
     </div>
     <div
-      class="w-full md:w-[600px] h-auto md:h-[228px] flex flex-col items-center justify-center mx-auto"
+      class="w-full md:w-[600px] h-auto md:h-[200px] flex flex-col items-center justify-center mx-auto lg:w-auto xl:w-[500px]"
     >
-      <h1
-        class="text-slate-900 text-3xl md:text-4xl font-medium font-['Roboto'] leading-[48px]"
+      <div
+        class="lg:flex lg:flex-col lg:justify-center lg:mx-auto lg:mt-[15rem]"
       >
-        {title}
-      </h1>
-      <p class="mt-5 text-slate-500 text-base font-normal leading-relaxed">
-        {description}
-      </p>
+        <h1
+          class="text-slate-900 text-3xl md:text-4xl font-medium font-['Roboto'] leading-[48px] text-center lg:text-start"
+        >
+          {title}
+        </h1>
+        <p
+          class="mt-5 text-slate-500 text-base font-normal leading-relaxed text-center lg:text-start"
+        >
+          {description}
+        </p>
+      </div>
     </div>
   </div>
 </section>

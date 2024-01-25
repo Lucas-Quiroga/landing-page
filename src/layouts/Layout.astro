@@ -49,15 +49,16 @@ const infoSection = [
     <Hero />
     <SectionInfo />
     {
-      infoSection.map((section) => (
+      infoSection.map((section, index) => (
         <SectionReu
           title={section.title}
           description={section.description}
           svg={section.svg}
+          index={index}
         />
       ))
     }
-    <!-- <Pricing /> -->
+    <Pricing />
     <Footer />
   </body>
 </html>
