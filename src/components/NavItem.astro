@@ -2,6 +2,8 @@
 const { title, path } = Astro.props;
 ---
 
-<li class="block w-full py-3 text-center hover:bg-indigo-900 hover:text-white">
+<li
+  class="block w-full py-3 text-center hover:bg-indigo-900 hover:text-white lg:hover:bg-white lg:hover:text-black"
+>
   <a href={path}>{title}</a>
 </li>
