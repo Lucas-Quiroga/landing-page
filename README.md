@@ -1,4 +1,4 @@
-# INNOVA TECH🍔
+# INNOVA TECH
 
 Landing page demo platform designed to boost your business. With an innovative solution that facilitates the presentation of products, allowing you to highlight them quickly and effectively.
 
