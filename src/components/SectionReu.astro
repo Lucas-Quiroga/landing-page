@@ -16,18 +16,18 @@ const { title, description, svg, index } = Astro.props;
       <Fragment set:html={svg} />
     </div>
     <div
-      class="w-full md:w-[600px] h-auto md:h-[200px] flex flex-col items-center justify-center mx-auto lg:w-auto xl:w-[500px]"
+      class="w-full md:w-[600px] h-auto md:h-[200px] flex flex-col items-center justify-center mx-auto lg:w-auto xl:w-[600px]"
     >
       <div
         class="lg:flex lg:flex-col lg:justify-center lg:mx-auto lg:mt-[15rem]"
       >
         <h1
-          class="text-slate-900 text-3xl md:text-4xl font-medium font-['Roboto'] leading-[48px] text-center lg:text-start"
+          class="text-slate-900 text-3xl md:text-4xl font-medium font-['Roboto'] leading-[48px] text-center lg:text-start xl:text-5xl"
         >
           {title}
         </h1>
         <p
-          class="mt-5 text-slate-500 text-base font-normal leading-relaxed text-center lg:text-start"
+          class="mt-5 text-slate-500 text-base font-normal leading-relaxed text-center lg:text-start xl:text-xl"
         >
           {description}
         </p>
